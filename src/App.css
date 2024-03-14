@@ -1,0 +1,132 @@
+
+
+.animate-charcter
+{
+   text-transform: uppercase;
+  background-image: linear-gradient(
+    -225deg,
+    #c6bbef 0%,
+    #802adc 29%,
+    #ff1361 67%,
+    #625f02 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  /* text-fill-color: transparent; */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear infinite;
+  display: inline-block;
+  font-size: 40px;
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .animate-character {
+    font-size: 8vw;
+  }
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+
+
+.formsection{
+    background-image: url('https://i.pinimg.com/564x/dc/68/5d/dc685d7eaea51ad64f2166da72086391.jpg');
+    background-size: cover; 
+    background-position: center; 
+    
+    /* height: 100vh; */
+}
+
+
+
+.recipe-card {
+    width: 16rem;
+    perspective: 1000px; /* Add perspective to create a 3D effect */
+  }
+  
+  .recipe-card-img:hover {
+    transform: rotateY(1deg) scale(1.2); /* Rotate and scale the image on hover */
+  }
+  
+  .recipe-card-img {
+    height: 300px;
+    cursor: pointer; /* Change cursor to pointer to indicate clickable image */
+    transition: transform 0.4s ease; /* Add transition for smooth hover effect */
+  }
+  
+/* for footer */
+.nav-item button {
+  /* background: linear-gradient(to right, #ff9900, #ff5e62); */
+  border: none;
+  outline: none;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s ease;
+}
+
+.nav-item button:hover {
+  background-image: linear-gradient(-35deg, rgb(16, 16, 16) 20%,rgb(80, 11, 2) , rgb(43, 1, 1) , rgb(144, 239, 144)  );
+}
+
+.nav-item p {
+  margin-top: 5px;
+  text-align: center;
+  font-size: 14px;
+  color: #444444;
+}
+
+.nav-item:hover i {
+  animation: shake .5s;
+}
+
+@keyframes shake{
+  10%{
+      transform: rotate(20deg);
+  }
+  20%{
+      transform: rotate(-20deg);
+  }
+  30%{
+      transform: rotate(20deg);
+  }
+  40%{
+      transform: rotate(-20deg);
+  }
+
+}
+
+.pagination {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin-left: 20%;
+  margin-top: 10%;
+}
+
+.pagination li {
+  margin: 0 5px;
+}
+
+.pagination li a {
+  text-decoration: none;
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  color: #333;
+  border-radius: 3px;
+}
+
+.pagination li a:hover {
+  background-color: #f0f0f0;
+}
+
+
+
+  
