@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import {Offcanvas} from 'react-bootstrap'
 import { updateUserProfileAPI } from '../Services/allAPI';
-import uploadProfile from '../assets/images/profile.jpg'
+import uploadProfile from '../assets/Images/profile.jpg'
 import { toast,ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { SERVER_URL } from '../Services/serverURL';
@@ -25,7 +25,7 @@ const [show, setShow] = useState(false);
     if(sessionStorage.getItem("userDetails")){
         const user=JSON.parse(sessionStorage.getItem("userDetails"))
         setuserData({...userData,username:user.username,email:user.email,password:user.password,facebook:user.facebook,instagram:user.instagram})
-        setExistingImg(user.pImg)
+        setExistingImg(user.profile)
     }
 
 },[])
