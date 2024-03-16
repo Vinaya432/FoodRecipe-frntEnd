@@ -18,7 +18,7 @@ function Header() {
   return (
     <div>
         <Navbar fixed="top">
-        <Container >
+        <Container className='flex-wrap'>
           <Navbar.Brand  className='d-flex align-items-center' >
             <h1 className='fw-bold animate-charcter'>Flavor Fusion</h1>
           </Navbar.Brand>

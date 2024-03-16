@@ -73,8 +73,10 @@ function Auth({ insideRegister }) {
                     sessionStorage.setItem("role", "user");
                     sessionStorage.setItem("userDetails",JSON.stringify(result.data.existingUser))
                     setIsAuthorised(true)
-                    setUserDetails({email:"",password:""})
+                    setUserDetails({email:" ",password:" "})
+                    setRole({role:''})
                     setLoginStatus(true);
+                    // console.log("after login:",userDetails);
                     console.log("Login successful!");
                     setTimeout(()=>{
                         navigate('/home')
@@ -140,7 +142,7 @@ return (
                                 </div>
                                 :
                                 <div className='text-center'>
-                                    <button className='btn  mb-2 btn-success w-25 mt-3 rounded-pill' onClick={handleLogin} disabled={loginStatus}>Login{loginStatus && <Spinner animation="border" variant="warning" />}</button>
+                                    <button className='btn  mb-2 btn-success w-25 mt-3 rounded-pill' onClick={handleLogin} disabled={loginStatus}>Login{loginStatus? <Spinner animation="border" variant="warning" />:''}</button>
                                     <p>New User? Click here to <Link to={'/register'} className='text-danger fw-bold'>Register</Link></p>
                                 </div>}
                         </div>
