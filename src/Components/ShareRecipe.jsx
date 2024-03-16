@@ -54,7 +54,6 @@ function ShareRecipe({ recipedata }) {
                     </WhatsappShareButton>
                 </Offcanvas.Body>
             </Offcanvas>
-            {/* <iframe src={pdfUrl} title="PDF Viewer" width="100%" height="500px" /> */}
         </>
     );
 }

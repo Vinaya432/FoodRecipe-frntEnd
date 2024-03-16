@@ -105,6 +105,8 @@ function Admindashboard() {
 
   useEffect(() => {
     getAllRecipes()
+    setDeleteRecipeResponse(false)
+    setAddRecipeResponse(false)
   }, [deleteResponse, addReciperesponse])
 
   const handleLogout = () => {
@@ -124,11 +126,12 @@ function Admindashboard() {
   return (
     <>
 
-     <div className='container'>
-        <div className='w-100 rounded d-flex align-items-center justify-content-between flex-wrap' style={{ backgroundImage: 'url(https://www.wallpaperflare.com/static/513/175/755/low-poly-minimalism-triangle-digital-art-wallpaper.jpg)', height: '150px' }}>
-          <h2>Flavour Fusion</h2>
-          <h2>Welcome to Admin Panel!!!</h2>
-          <button onClick={handleLogout} className="btn fw-bold text-info">Logout <i className="ms-1 fa-solid fa-right-from-bracket"></i></button>
+     <div className='container-fluid bg-dark bg-opacity-25' style={{overflowX:'hidden'}}>
+        <div className='w-100 rounded d-flex align-items-center justify-content-between flex-wrap' style={{ backgroundImage: 'url(https://t4.ftcdn.net/jpg/02/34/63/07/360_F_234630793_eHKQucxaXftnWrecTJFITmD4cr3TlUgG.jpg)',backgroundSize: 'cover', backgroundPosition: 'center', height: '250px' }}>
+           
+          <h2 >Flavour Fusion</h2>
+          <h2 style={{color:'brown'}}>Welcome to Admin Panel!!!</h2>
+          <button onClick={handleLogout} className="btn fw-bold  fs-4" style={{color:'blanchedalmond'}}>Logout <i className="ms-1 fa-solid fa-right-from-bracket fa-beat"></i></button>
         </div>
         <div style={{ height: '100vh' }} className='ms-5 mt-5 w-100 row d-flex justify-content-center'>
   
@@ -145,19 +148,9 @@ function Admindashboard() {
               </div>
             )) }
             
-            <ReactPaginate
-              pageCount={Math.ceil(allrecipes.length / recipesPerPage)}
-              pageRangeDisplayed={4}
-              marginPagesDisplayed={2}
-              onPageChange={handlePageChange}
-              containerClassName="pagination"
-              activeClassName="active"
-              previousLabel="Previous"
-              nextLabel="Next"
-              breakLabel="..."
-              breakClassName="break-me"
-            />
-         
+            
+            
+            <ReactPaginate  pageCount={Math.ceil(allrecipes.length / recipesPerPage)}   pageRangeDisplayed={4}   marginPagesDisplayed={2}   onPageChange={handlePageChange}  containerClassName="pagination"  activeClassName="active"    previousLabel={<span style={{ color: 'blue' }}>Previous</span>}   nextLabel={<span style={{ color: 'green' }}>Next</span>}  breakLabel={<span style={{ color: 'red' }}>...</span>}   breakClassName="break-me"/>
           
           </div>
   

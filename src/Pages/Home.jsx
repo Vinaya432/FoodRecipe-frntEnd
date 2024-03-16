@@ -27,7 +27,7 @@ function Home() {
 
   useEffect(()=>{
     getAllRecipes()
-    setAddRecipeResponse(false)
+    // setAddRecipeResponse(false)
   },[searchKey,addReciperesponse,deleteRecipeResponse])
 
   const getAllRecipes=async ()=>{
