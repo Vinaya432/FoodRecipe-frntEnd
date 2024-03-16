@@ -16,8 +16,8 @@ function Header() {
     navigate('/login')
   }
   return (
-    <div>
-        <Navbar fixed="top">
+    <div >
+        <Navbar className='mb-2' fixed="top">
         <Container className='flex-wrap'>
           <Navbar.Brand  className='d-flex align-items-center' >
             <h1 className='fw-bold animate-charcter'>Flavor Fusion</h1>

@@ -137,7 +137,7 @@ return (
 
                             {insideRegister ?
                                 <div className='text-center'>
-                                    <button className='btn btn-success mb-2 rounded-pill' onClick={handleRegister}>Register</button>
+                                    <button className='btn btn-success mb-2 w-25 rounded-pill' onClick={handleRegister}>Register</button>
                                     <p>Already have an Account? Click here to <Link to={'/login'} className='text-danger fw-bold'>Login</Link></p>
                                 </div>
                                 :
